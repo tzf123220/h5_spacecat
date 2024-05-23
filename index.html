@@ -3,23 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Space_Cat</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <title>Unity WebGL Player | ZhiQiao</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/h5_spacecat.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/JuZhi7Mobile.json");
+      function Reset()
+    {
+        var canvas = document.getElementById("#canvas");//获取#canvas
+        canvas.height=  document.documentElement.clientHeight;//获取body可见区域高度
+        canvas.width =  document.documentElement.clientWidth;//获取body可见区域高度
+ 
+    }
     </script>
   </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 720px; height: 1280px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Space_Cat</div>
-      </div>
-    </div>
+  <body onresize="Reset()" ,scroll= no, style="overflow:hidden">
+    <div id="gameContainer" style="width: 100vw; height: 100vh;margin:auto"></div>
   </body>
 </html>
