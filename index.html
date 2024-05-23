@@ -1,46 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DMJ</title>
+    <title>Unity WebGL Player | Space_Cat</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/DMJ_WebApp.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/h5_spacecat.json", {onProgress: UnityProgress});
     </script>
-
   </head>
-
-  <!-- body 中调用 OnResize方法, 这样在PC端使用浏览器查看时, 当用户改变浏览器尺寸时, 屏幕自适应 -->
-  <body onResize="ChangeCanvas()">
+  <body>
     <div class="webgl-content">
-
-      <!-- 在这里设置游戏的 整个界面是100%填充设备 -->
-      <div id="gameContainer" style="width:100%; height:100%"></div>
-
-      <!-- 如果你不需要显示底部的, 直接注释掉就好了 -->
+      <div id="unityContainer" style="width: 720px; height: 1280px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">DMJ</div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Space_Cat</div>
       </div>
-      
     </div>
-
-    <script type="text/javascript">
-      function ChangeCanvas()
-      {
-         document.getElementById("gameContainer").style.width = window.innerWidth + "px";
-         document.getElementById("gameContainer").style.height = window.innerHeight + "px";
-         document.getElementById("#canvas").style.width = window.innerWidth + "px";
-         document.getElementById("#canvas").style.height = window.innerHeight + "px";
-      }
-    </script>
   </body>
-
 </html>
