@@ -10,6 +10,24 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/h5_spacecat.json", {onProgress: UnityProgress});
+      function resize() {
+
+        var canvas = document.getElementsByTagName('canvas')[0];
+
+        var width = window.innerWidth;
+
+        var height = window.innerHeight;
+
+        canvas.style.width = width + 'px';
+
+        canvas.style.height = height + 'px';
+
+    }
+
+    window.addEventListener('resize', resize);
+
+    resize();
+
     </script>
   </head>
   <body>
