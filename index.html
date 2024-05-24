@@ -10,34 +10,34 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/h5_spacecat.json", {onProgress: UnityProgress});
-      function resize() {
+    //   function resize() {
 
-        var canvas = document.getElementsByTagName('canvas')[0];
+    //     var canvas = document.getElementsByTagName('canvas')[0];
 
-        var width = window.innerWidth;
+    //     var width = window.innerWidth;
 
-        var height = window.innerHeight;
+    //     var height = window.innerHeight;
 
-        canvas.style.width = width + 'px';
+    //     canvas.style.width = width + 'px';
 
-        canvas.style.height = height + 'px';
+    //     canvas.style.height = height + 'px';
 
-    }
+    // }
 
-    window.addEventListener('resize', resize);
+    // window.addEventListener('resize', resize);
 
-    resize();
+    // resize();
 
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 720px; height: 1280px"></div>
-      <div class="footer">
+      <!-- <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">Space_Cat</div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
